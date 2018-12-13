@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/martinbliss/p202QABootcamp#readme",
   "devDependencies": {
+    "lodash": "^4.17.11",
+    "testcafe": "^0.23.2",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.2.2"
