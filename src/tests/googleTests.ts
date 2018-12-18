@@ -21,3 +21,8 @@ test('Can search for dogs', async test => {
         .expect(SearchResult('Dog - Wikipedia').exists).eql(true);
 });
 
+test('Can see the first result of searching for dogs is "Complete Guide to Caring for Dogs | Dog Breed Information, Dog ..."', async test => {
+    await test.typeText(SearchBar, 'dogs')
+        .pressKey('enter')
+        .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
+});
