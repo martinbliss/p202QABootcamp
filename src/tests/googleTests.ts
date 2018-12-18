@@ -15,11 +15,6 @@ test('Can see the first result of searching for cats is a complete guide to cari
         .expect(SearchResult('Complete Guide to Caring for Cats | Cat Breed Information, Cat ...').exists).eql(true);
 });
 
-test('', async test => { })
-
-
-jdjfjfjfhjeiej
-
 test('Can search for dogs', async test => {
     await test.typeText(SearchBar, 'dogs')
         .pressKey('enter')
@@ -31,19 +26,3 @@ test('Can see the first result of searching for dogs is "Complete Guide to Carin
         .pressKey('enter')
         .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
 });
-
-doiawodihaowifhaoeifhsoiuehdfilsuhefipu
-hing for dogs is "Complete Guide to Caring for Dogs | Dog Breed Information, Dog ..."', async test => {
-await test.typeText(SearchBar, 'dogs')
-    .pressKey('enter')
-    .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
-});
-
-doiawodihaowifhaoeifhsoiuehdfilsuhefipu
-hing for dogs is "Complete Guide to Caring for Dogs | Dog Breed Information, Dog ..."', async test => {
-await test.typeText(SearchBar, 'dogs')
-    .pressKey('enter')
-    .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
-});
-
-doiawodihaowifhaoeifhsoiuehdfilsuhefipu
