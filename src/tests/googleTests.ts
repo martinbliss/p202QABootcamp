@@ -3,7 +3,7 @@ import { SearchBar, SearchSuggestion, SearchResult } from '../api/google';
 
 fixture('Getting Started').page('http://www.google.com');
 
-test('Can search for cats and see the first result is for cats', async test => {
+test('Can search for cats and see that a search suggestion "cats" is present', async test => {
     await test.typeText(SearchBar, 'cats')
         .expect(SearchSuggestion('cats').textContent).eql('cats');
 });
@@ -19,3 +19,15 @@ test('', async test => {})
 
 
 jdjfjfjfhjeiej
+
+test('Can search for dogs', async test => {
+    await test.typeText(SearchBar, 'dogs')
+        .pressKey('enter')
+        .expect(SearchResult('Dog - Wikipedia').exists).eql(true);
+});
+
+test('Can see the first result of searching for dogs is "Complete Guide to Caring for Dogs | Dog Breed Information, Dog ..."', async test => {
+    await test.typeText(SearchBar, 'dogs')
+        .pressKey('enter')
+        .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
+});
