@@ -18,7 +18,6 @@ test('Can see the first result of searching for cats is a complete guide to cari
 test('', async test => { })
 
 
-jdjfjfjfhjeiej
 
 test('Can search for dogs', async test => {
     await test.typeText(SearchBar, 'dogs')
