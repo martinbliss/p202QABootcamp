@@ -18,7 +18,6 @@ test('Can see the first result of searching for cats is a complete guide to cari
 test('', async test => { })
 
 
-
 test('Can search for dogs', async test => {
     await test.typeText(SearchBar, 'dogs')
         .pressKey('enter')
@@ -29,5 +28,11 @@ test('Can see the first result of searching for dogs is "Complete Guide to Carin
     await test.typeText(SearchBar, 'dogs')
         .pressKey('enter')
         .expect(SearchResult('Complete Guide to Caring for Dogs | Dog Breed Information, Dog ...').exists).eql(true);
+});
+
+test('Can see the first result of searching for Disney is "Walt Disney World Resort in Orlando, Florida"', async test => {
+    await test.typeText(SearchBar, 'Disney')
+        .pressKey('enter')
+        .expect(SearchResult('Walt Disney World Resort in Orlando, Florida').exists).eql(true);
 });
 
