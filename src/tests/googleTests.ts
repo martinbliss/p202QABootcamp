@@ -15,9 +15,12 @@ test('Can see the first result of searching for cats is a complete guide to cari
         .expect(SearchResult('Complete Guide to Caring for Cats | Cat Breed Information, Cat ...').exists).eql(true);
 });
 
+<<<<<<< HEAD
 test('', async test => { })
 
 
+=======
+>>>>>>> 6ab70de84bafa355e7fdfe068680704be17a5e21
 test('Can search for dogs', async test => {
     await test.typeText(SearchBar, 'dogs')
         .pressKey('enter')
